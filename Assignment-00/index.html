@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Healthy Bites">
+    <title>Healthy Bites</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        main{
+            margin-top: 20px;
+        }
+        .bgclr{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .bgclr-selector{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .frame{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+        iframe{
+            height: 25rem; 
+            width: 40rem;
+            border: 1px solid rgba(0, 0, 0, 0.265);
+
+        }
+        .dropdown {
+            display: inline-block;
+            margin: 40px 10px;
+            color: #c21278;
+        }
+        .link{
+            padding: 10px;
+            display: inline-block;
+            color: #c21278;
+        }
+        .container {
+            width: 100%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .section-left, .section-center, .section-right {
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .section-left, .section-right {
+            width: 20%;        
+        }
+
+        .section-center {
+            width: 55%;
+            border-right: 2px solid #c21278;
+            border-left: 2px solid #c21278;
+        }
+
+        h2, h3 {
+            color: #c21278;
+        }
+
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li{
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-left, .section-center, .section-right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1 class="logo">Healthy Bites</h1>
+            <div class="call-icon"><i class='bx bxs-phone' style='color:#ffffff'></i>Call: 9999999999</div>
+        </div>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="bgclr">
+            <div class="bgclr-selector">
+                <label for="bgclr">Select a color to change the background of the page : </label>
+                <input type="color" id="bgclr">
+            </div>
+            <button type="button" onclick="changeBGColor()">Submit</button>
+
+        </div>
+
+        <div class="container">
+
+            <div class="section-left">
+                <h2>Why Nutrition?</h2>
+                <p>Nutrition as we all know is an important aspect for everyone. Should be taken care of from the start.</p>
+                <h3>Programmes To choose from</h3>
+                <ul>
+                    <li>Improve Health</li>
+                    <li>Reduce weight</li>
+                    <li>Change Lifestyle</li>
+                </ul>
+                <h3>Events</h3>
+                <ul>
+                    <li>30 mins everyday</li>
+                    <li>Weekly Once Events</li>
+                </ul>
+            </div>    
+
+            <div class="section-center">
+                <div class="frame">
+                    <iframe src="https://en.wikipedia.org/wiki/Nutrition" title="Nutrition" name="frame"></iframe>
+                </div>
+                <div class="dropdown">
+                    <details>
+                        <summary>
+                            Importance of Nutrition
+                        </summary>
+                        <a href="https://en.wikipedia.org/wiki/Malnutrition" class="link" target="frame">Impact Of Malnutrition</a><br>
+                        <a href="https://globalvolunteers.org/why-nutrition-is-a-smart-investment/" class="link" target="frame">Why Invest In Nutrition</a> 
+                    </details>
+                </div>
+            </div>
+
+        <div class="section-right">
+            <h3>News</h3>
+            <ul>
+                <li>Appeared in Famous Magazines</li>
+                <li>Awarded by the best company award</li>
+            </ul>
+            <h3>Resources</h3>
+            <ul>
+                <li>Checkout out events page</li>
+                <li>Reduce weight</li>
+                <li>Change Lifestyle</li>
+            </ul>
+            <h3>Events</h3>
+            <ul>
+                <li>30 mins everyday</li>
+                <li>Weekly Once Events</li>
+            </ul>
+        </div>
+
+    </div>
+        
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="shape">
+            <canvas id="square" height="50" width="50"></canvas>
+            <p>DO NOT OVERLOOK YOUR HEALTH</p>
+        </div>
+
+        <div class="shape">
+            <svg>
+                <circle cx="25" cy="25" r="23" stroke="#c21278" stroke-width="3" fill="none">
+            </svg> 
+            <p>HEALTH IS IMPORTANT</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function changeBGColor(){
+            const bgclr=document.getElementById('bgclr').value;
+            document.body.style.backgroundColor= bgclr;
+            console.log(bgclr);
+        }
+
+    </script>
+</body>
+</html>

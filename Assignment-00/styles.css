@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex ;
+    flex-direction: column;
+}
+header, main {
+    flex: 1; /* Allows the main content to take up the remaining space */
+}
+header{
+    background-color: #c21278;
+    color: #ffffff;
+    padding: 10px;
+    padding-top: 0;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+nav ul li{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    
+}
+nav ul li a{
+    color: #ffffff;
+}
+
+.footer{
+    border-top: 2px solid #c21278;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.shape{
+    color: #c21278;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+
+}
+.shape canvas,svg{
+    width: 50px;
+    height: 50px;
+}
+
+.shape p{
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
