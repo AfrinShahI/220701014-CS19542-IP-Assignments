@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!DOCTYPE html>
+<head>
+    <title>Product Management Dashboard</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color:  #ccccf0;
+        }
+        form{
+            display:flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        label{
+            width: 100px;
+        }
+        input, button{
+            width: 300px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid grey;
+        }
+        button{
+            width: 100px; 
+            display: flex;
+            margin: auto;
+            text-align: center;
+        }
+        form div{
+            display: flex;
+            align-items: center;
+        }
+        
+        main{
+            border: 1px solid gray;
+            border-radius: 10px;
+            width: fit-content;
+            margin: auto;
+            padding: 20px;
+        }
+        main h1{
+            text-align: center;
+            margin-bottom: 30px
+        }        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Product Management</h1>
+        <nav>
+            <a href="index.html">Add Product</a> |
+            <a href="ViewProductsServlet">View Products</a> |
+            <a href="SearchProductsServlet">Search Products</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Add Product</h1>
+        <form action="AddProductServlet" method="post" id="productForm">
+            <input type="hidden" name="id" id="productId">
+            <div><label>Name:</label>
+            <input type="text" name="name" required></div>
+            <div><label>Category:</label>
+            <input type="text" name="category"></div>
+            <div><label>Price:</label>
+            <input type="text" name="price" required></div>
+            <div><label>Stock:</label>
+            <input type="number" name="stock" min="1" required></div>
+            <button type="submit">Add Product</button>
+        </form>
+    </main>
+</body>
+</html>
+
