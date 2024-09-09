@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href='style.css'>
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    
+    <div class="container">
+        <div class="sidebar">
+            <h2>Filters</h2>
+            <ul>
+                <li><a href="#" class='filter' id="all">All</a></li>
+                <li><a href="#" class='filter' id="pending">Pending</a></li>
+                <li><a href="#" class='filter' id="completed">Completed</a></li>
+            </ul>
+        </div>
+        
+        <main>
+            <form action="TaskServlet" class="add-task" onsubmit="return validate(event)">
+                <h2>Add New Task</h2>
+                <input class="inputs" type="text" name="title" id="title" placeholder="Task Name">
+                <textarea class="inputs" name="desc" id="desc" placeholder="Description"></textarea>
+                <input class="inputs" type="date" name="duedate" id="duedate">
+                <button class="inputs" type="submit" id="addTask">Add Task</button>
+            </form>
+           <div id="loader"></div>
+            <div class="display-task">
+                <h2>Tasks</h2>
+                <ul id="task-list" class="task-list">
+                </ul>
+            </div>
+        </main>    
+    </div>
+
+    <footer>
+        <a href="home.html">Home</a>
+        <a href="home.html">About</a>
+        <a href="home.html">Contact</a>
+        <p>&copy;2024 Task Manager. All rights reserved.(220701014)</p>
+    </footer>
+
+    <script src='script.js'></script>
+    
+</body>
+</html>

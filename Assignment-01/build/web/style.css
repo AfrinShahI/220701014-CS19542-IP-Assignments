@@ -1,0 +1,100 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 9 Sept 2024, 1:01:15 am
+    Author     : AFRIN
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button, .inputs{
+    border-radius: 5px;
+    border: 1px solid #d3cfcfbc;
+    outline: #807e7e;
+}
+button:hover, .inputs:hover{
+    background-color: #4cb94c50;
+}
+.container{
+    display: flex;
+    margin: 20px;
+
+}
+.sidebar{
+    background-color: #d3cfcf7b;
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+}
+.sidebar a{
+    text-decoration: none;
+    color: black;
+}
+header{
+    background-color: #4db74d;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+main{
+    margin: 20px;
+    width: 60%;
+}
+.inputs{
+    display: block;
+    margin-bottom: 20px;    /* trbl */
+    padding:10px;
+}
+button{
+    padding: 0 20px;
+}
+.task-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.task-list li{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.completed{
+     text-decoration: line-through;
+     color: gray;
+}
+.task-list span{
+    display: block;
+    font-size: 0.8rem;
+}
+footer{
+    background-color: #4db74d;
+    padding: 10px 0 1px 0;
+    color: white;
+    text-align: center;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+#loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #4db74d;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    display: none;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
