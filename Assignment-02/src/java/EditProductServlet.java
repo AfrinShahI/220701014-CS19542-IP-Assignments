@@ -1,13 +1,13 @@
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+ */
+
+import java.io.*;
+import java.sql.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+
 
 /**
  *
@@ -96,7 +96,6 @@ public class EditProductServlet extends HttpServlet {
             ps.close();
             conn.close();
         } catch (Exception e) {
-            e.printStackTrace();
             out.println("<h2>Error retrieving product details.</h2>");
         }
     }
@@ -138,7 +137,6 @@ public class EditProductServlet extends HttpServlet {
             ps.close();
             conn.close();
         } catch (Exception e) {
-            e.printStackTrace();
             out.println("<h2>Error updating product.</h2>");
         }
     }
