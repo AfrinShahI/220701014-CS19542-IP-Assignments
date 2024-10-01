@@ -3,16 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-
+import java.io.*;
+import java.sql.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
 
 /**
  *
@@ -53,7 +47,6 @@ public class DeleteProductServlet extends HttpServlet {
             ps.close();
             conn.close();
         } catch (Exception e) {
-            e.printStackTrace();
             out.println("<h2>Error deleting product.</h2>");
         }
     }
