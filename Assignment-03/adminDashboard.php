@@ -4,7 +4,7 @@ include 'db.php'; // Database connection
 include 'menu.php';
 
 if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
-    header("Location: adminLogin.php"); // Redirect to login if not admin
+    header("Location: index.php"); // Redirect to login if not admin
     exit();
 }
 
