@@ -3,7 +3,7 @@ session_start();
 include 'db.php'; // Database connection
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: userLogin.php'); // Redirect if not logged in
+    header('Location: index.php'); // Redirect if not logged in
     exit();
 }
 
