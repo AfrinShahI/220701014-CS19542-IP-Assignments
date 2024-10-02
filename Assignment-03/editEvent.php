@@ -3,7 +3,7 @@ session_start();
 include 'db.php'; // Database connection
 
 if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
-    header("Location: adminLogin.php");
+    header("Location: index.php");
     exit();
 }
 
